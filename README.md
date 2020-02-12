@@ -1,4 +1,6 @@
-# yuefan
+# HCC-Yuefan
+
+Frontend of HCC-Yuefan.
 
 ## Project setup
 ```
