@@ -72,6 +72,8 @@
             this.$store.dispatch('setUser', username);
             this.$router.addRoutes(util.routes);
           }).catch(err => {
+            this.$message.error("Failed to get user information");
+            util.removeStore("token");
             window.console.log(err);
           });
         }

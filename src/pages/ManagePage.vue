@@ -47,6 +47,10 @@
         }).then(rsp => {
           this.restaurants = rsp.data.restaurants;
           this.loading = false;
+        }).catch(err => {
+          window.console.log(err);
+          this.loading = false;
+          this.$message.error("Failed to get custom restaurants");
         });
       },
       getRestaurants: function() {
@@ -54,6 +58,10 @@
         this.$http.get("/api/restaurants").then(rsp => {
           this.restaurants = rsp.data.restaurants;
           this.loading = false;
+        }).catch(err => {
+          window.console.log(err);
+          this.loading = false;
+          this.$message.error("Failed to get restaurants");
         });
       },
       handleAdd: function() {

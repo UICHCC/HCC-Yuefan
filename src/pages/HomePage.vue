@@ -86,6 +86,9 @@
               window.console.log(err)
             })
           }
+        }).catch(err => {
+          window.console.log(err);
+          this.$message.error("Failed to get custom restaurants");
         })
       }
     },
